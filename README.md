@@ -7,6 +7,7 @@ Proyecto desarrollado en Python utilizando ReactPy y Asyncio.
 - Freddy Lainez
 - Jose
 - Carlos
+- Jonathan Panchana Rodríguez
 
 ## Tecnologías
 
