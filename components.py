@@ -6,7 +6,7 @@ def titulo():
         {
             "style": {
                 "textAlign": "center",
-                "color": "#2c3e50",
+                "color": "#1E3A8A"
             }
         },
         "🎮 Trivia Arena Async"
@@ -17,27 +17,30 @@ def temporizador(segundos):
     return html.h2(
         {
             "style": {
-                "color": "red",
+                "color": "#DC2626",
                 "textAlign": "center"
             }
         },
-        f"⏳ Tiempo restante: {segundos} s"
+        f"⏳ Tiempo restante: {segundos} segundos"
     )
 
 
 def pregunta(texto):
     return html.div(
-        html.h3("Pregunta"),
+        html.h2("Pregunta"),
         html.p(texto)
     )
 
 
 def opciones():
+
     return html.div(
-        html.button("A"),
-        html.button("B"),
-        html.button("C"),
-        html.button("D"),
+
+        html.button("A", {"style": {"margin": "5px"}}),
+        html.button("B", {"style": {"margin": "5px"}}),
+        html.button("C", {"style": {"margin": "5px"}}),
+        html.button("D", {"style": {"margin": "5px"}}),
+
     )
 
 
@@ -45,16 +48,25 @@ def jugadores(lista):
 
     return html.div(
 
-        html.h3("Jugadores"),
+        html.h2("Jugadores"),
 
-        html.ul(
+        html.table(
+
+            html.tr(
+                html.th("Jugador"),
+                html.th("Puntos")
+            ),
 
             *[
-                html.li(
-                    f"{j.nombre} - {j.puntaje} puntos"
+                html.tr(
+
+                    html.td(j.nombre),
+                    html.td(str(j.puntaje))
+
                 )
 
                 for j in lista
+
             ]
 
         )
