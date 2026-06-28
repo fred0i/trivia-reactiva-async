@@ -1,3 +1,4 @@
+from styles import PAGE, CARD, BUTTON
 from reactpy import html
 
 
@@ -36,10 +37,10 @@ def opciones():
 
     return html.div(
 
-        html.button("A", {"style": {"margin": "5px"}}),
-        html.button("B", {"style": {"margin": "5px"}}),
-        html.button("C", {"style": {"margin": "5px"}}),
-        html.button("D", {"style": {"margin": "5px"}}),
+        html.button("A", {"style": BUTTON}),
+        html.button("B", {"style": BUTTON}),
+        html.button("C", {"style": BUTTON}),
+        html.button("D", {"style": BUTTON}),
 
     )
 
